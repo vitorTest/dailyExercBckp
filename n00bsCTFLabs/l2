@@ -1,0 +1,6 @@
+infosec_flagis_wearejuststarting
+
+Download the image (curl https://link.to.image):
+aW5mb3NlY19mbGFnaXNfd2VhcmVqdXN0c3RhcnRpbmc=
+
+with base64 we can decode the phrase.
