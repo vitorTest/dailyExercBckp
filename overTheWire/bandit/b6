@@ -1,0 +1,14 @@
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+
+
+notes:
+
+find . -type f -size 1033c ! -executable -exec file {} + | grep ASCII
+
+Find here the type file (f), with the size of 1033c bytes, and if this file
+is not(!) an executable (-executable).
+
+Then execute (-exec) the file command with the files that are already filtered
+({}) by 'find' and also execute it in paralel (+ |) with the command
+'grep', to filter if that file is a 'ASCII' type.
