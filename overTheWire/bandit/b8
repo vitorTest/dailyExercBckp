@@ -1,0 +1,17 @@
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+cat data.txt | grep millionth
+
+
+Basic of basic use of the commands suggested:
+
+grep    - find the line with the argument passed.
+sort    - sorts the contents of a text file, line by line.
+uniq    - filters out repeated lines in a file.
+strings - display printable strings in [file(s)] (stdin by default).
+base64  - encode or decode FILE, or standar input, to standard output.
+tr	- translates (substitutes, or maps) one set of characters to another.
+tar     - used to create/maintain/modify/extract *.tar.* files.
+gzip    - Compress or expand compressed files.
+bzip2   - A zip's compression method.
+xxd     - creates a hex dump of a given input or do the reverse.
