@@ -1,0 +1,5 @@
+login: h4cking
+senha: 100.php
+
+Decompile flash file. I've used:
+$ swfmill swf2xml file.swf decom.xml

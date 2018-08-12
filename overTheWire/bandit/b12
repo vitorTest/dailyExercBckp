@@ -1,0 +1,7 @@
+
+It's a ROT-13 cipher.
+Decoding:
+tr 
+
+Rotating strings:
+tr 'A-Za-z' 'N-ZA-Mn-za-m' < rotateIt  >rotationated

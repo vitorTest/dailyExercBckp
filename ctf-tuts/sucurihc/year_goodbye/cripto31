@@ -1,0 +1,36 @@
+mHacker{ess4_c1fr4_3h_f4c1l_dm}
+
+mesfh1}Hr4r_l_a{_4f__cec_4d_ks13cm_
+
+Eh facil notar que existe uma substituicao da posicao das letras:
+
+mesfh1}Hr4r_l_a{_4f__cec_4d_ks13cm_
+ 1234567
+
+substituindo de 7 em 7 e retirando o caractere selecionado:
+
+mHacke
+sfh1}r4r_l_{_4f__ec_4d_s13cm_
+
+palpite: quando se dá uma volta, diminui o espaço (agora contando 6):
+
+mHacker{ess
+fh1}4r_l__4f__c_4d_13cm_
+
+com 5:
+mHacker{ess4_c1f
+h1}r_l_4f___4d_3cm_
+
+com 4:
+mHacker{ess4_c1fr4_3h
+1}_l_f__4d_cm_
+
+com 3:
+mHacker{ess4_c1fr4_3h_f4c1
+}l___d_m_
+
+com 2:
+mHacker{ess4_c1fr4_3h_f4c1l_dm
+}____
+
+logo: mHacker{ess4_c1fr4_3h_f4c1l_dm}____
