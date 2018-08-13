@@ -1,0 +1,4 @@
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+Reconstruc the file that was converted in text in the data.txt file (xxd -r).
+From there, just make a series of decompressions (tar, gzip, bzip2).
