@@ -1,0 +1,4 @@
+Most of the times pipes and redirects are used aren't nearly that complicated. 
+In fact, there are fairly few idioms that get used over and over. 
+I've tried to illustrate them in the examples below.
+
