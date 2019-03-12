@@ -1,0 +1,20 @@
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+with tmux I could create another section:
+tmux new -s netcat
+
+then started a nc service:
+echo "passOf20Level" | nc -l -p 65000
+#choose from the range of 1023-65535
+
+So I detach the section (Ctrl-b(wait for it) + d) and connect with the script:
+./script my_port
+
+Then reattach:
+tmux attach-session -t netcat
+
+It's quicker:
+$ tmux new
+$ 'creat nc server'
+$ Ctrl+b + % #create new section
+$ ./suconnect 65000 
