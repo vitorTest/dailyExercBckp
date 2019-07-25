@@ -1,5 +1,35 @@
 
+----What I did in anterior level to get this password------
+accessed /etc/cron.d/cronjob_bandit24
+the content of the cron 
 
+@reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+* * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
 
-jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+Content of 'cronjob_bandit24.sh'
+{#!/bin/bash
 
+myname=$(whoami)
+
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+	echo "Handling $i"
+	timeout -s 9 60 ./$i
+	rm -f ./$i
+    fi
+done}
+
+So this script open the folder /var/spool/bandit24 and
+for each file inside 'bandit24' (if not '.' or '..')
+'timeout' sends a '--signal=9' that will kill the possible
+process if it still running after 60 seconds.
+Then the script will to remove this file.
+
+The solutions seems to write a script that copy this files 
+to another folder, as soon as the user logs in.
+
+So I have to make this script and 

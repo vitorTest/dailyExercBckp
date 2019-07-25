@@ -1,5 +1,24 @@
 login: h4cking
 senha: 100.php
 
+In html source you can find the file:
+src="100security.swf"
+
+In browser you can access:
+http://www.100security.com.br/wargame/100security.swf
+or
+wget http://www.100security.com.br/wargame/100security.swf
+or 
+curl -o 100security.swf http://www.100security.com.br/wargame/100security.swf
+
+
 Decompile flash file. I've used:
-$ swfmill swf2xml file.swf decom.xml
+$ swfmill swf2xml 100security.swf decom.xml
+
+The installation was very tiring, the second time that
+I don't configurate a path, so I run this, was like that:
+./swfmill swf2xml ../../../vytor2repos/dailyExercBckp/100security/100security.swf ../../../vytor2repos/dailyExercBckp/100security/decompressed.xml
+
+For Kali you'll have to install a lot of packages
+more info about swfmill:
+https://github.com/djcsdy/swfmill
