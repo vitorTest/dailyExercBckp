@@ -1,0 +1,20 @@
+Alternate Data Systems
+
+- Microsoft NTFS Substructure.
+- You can use the same attributes for many alternate streams.
+
+Can be used for
+- Store other files (images, virus and etc)
+- Modify stream metadata
+- DoS
+
+Interesting behaviors
+- ADS filesize is not included in default filesize
+- Does not change the checksum
+- ADS is lost with Zip, Rar, ARJ, Base64, FAT32
+
+Usage
+- notepad 
+	> host_filename:stream
+- type
+	>  input_file > host_filename:stream

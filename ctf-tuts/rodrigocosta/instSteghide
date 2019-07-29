@@ -1,0 +1,17 @@
+Steghide is a steganography program that is able to hide data in 
+various kinds of image- and audio-files. 
+# apt-get install steghide
+
+Sample, embeding secret.txt in picture.jpg
+# steghide embed -cf picture.jpg -ef secret.txt
+
+Extracting:
+# steghide extract -sf picture.jpg
+
+Get some information about it before extracting it
+# steghide info picture.jpg
+
+
+
+https://www.blackmoreops.com/2017/01/11/steganography-in-kali-linux-hiding-data-in-image/
+

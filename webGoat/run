@@ -1,0 +1,38 @@
+java -jar webgoat-server-8.0.0.M25.jar [--server.port=8080] [--server.address=localhost]
+
+Once installed connect to 
+http://localhost:8080/WebGoat and 
+http://localhost:9090/WebWolf
+
+I can't save the pattern, so:
+prizefighter
+changeit
+
+I Give up my old version, still needs java 8 and to adapt that would
+be very  painful. So I downloaded the latest version on:
+
+https://github.com/WebGoat/WebGoat/releases
+
+I decided to use the container, because I wanna.
+So to install docker I followed (This is on Kali):
+https://github.com/vitorTest/docking/blob/master/linuxTips/inst-basicUse
+
+Get very wrong and now I can't update kkk... So let's rm that:
+sudo rm /etc/apt/sources.list.d/docker.list
+
+Now I have to decide if I'll to continue investing in docker...
+Maybe I need it in future... 
+But I want to set up webGoat and have a little time, so I'll get
+back in the easiest way, by running with Java.
+
+Download the latest version...
+Give the command at the beginning of the file.
+
+-----------------------Old version---------------------------------------
+I already forget all about how to run it. 
+So let's keep some notes.
+
+java --add-modules java.xml.bind -jar webgoat-server-8.0.0.VERSION.jar.
+
+runing at:
+http://127.0.0.1:8080/WebGoat/login
