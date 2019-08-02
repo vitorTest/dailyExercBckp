@@ -1,0 +1,11 @@
+I've downloaded the 'jontux.jpg' file, and get some info with steghide:
+
+# steghide info jontux.jpg
+
+Bingo, there's a file embedded named as '100security.txt'... whit no
+password at all. Now is just to extract and read the file.
+
+# steghide extract -sf jontux.jpg
+
+Read message:
+O link para o proximo nivel eh: tuxbrdb.php

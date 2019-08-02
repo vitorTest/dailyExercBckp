@@ -1,0 +1,5 @@
+1 - fcrackzip
+
+Still running in Kali.
+Brute force (psswd_lenght= 5, only_numbers):
+> fcrackzip -v -b -u -l 5 -c 1

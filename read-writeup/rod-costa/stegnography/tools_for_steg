@@ -1,0 +1,6 @@
+1 - Steghide
+
+Was default in Kali (not anymore).
+> steghide extract -sf name.jpg
+! Try the name of the fila as a password
+! Dictionary attack
