@@ -1,1 +1,12 @@
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+You could read it by the path name:
+> cat ./spaces\ in\ this\ filename
+
+or only press Tab to get the work done.
+
+Basically you have to know that for represent specials chars (like 
+space) you have to use the backslash symbol before the special chars.
+
+
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
