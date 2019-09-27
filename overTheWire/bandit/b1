@@ -1,1 +1,32 @@
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+A Dashed-filenamed file.
+
+If you try to read the file -, it will be interpreted (by bash) as an 
+argument for the command.
+
+A word from the experts:
+-----------------------------------------------------------------------
+Using - as a filename to mean stdin/stdout is a convention that a lot 
+of programs use. It is not a special property of the filename. 
+The kernel does not recognise - as special so any system calls 
+referring to - as a filename will use - literally as the filename.
+
+With bash redirection, - is not recognised as a special filename, 
+so bash will use that as the literal filename.
+
+When cat sees the string - as a filename, it treats it as a synonym 
+for stdin. [...] {camh}
+{https://unix.stackexchange.com/questions/16357/usage-of-dash-in-place-of-a-filename}
+-----------------------------------------------------------------------
+
+Solution:
+"Alter the string that cat sees in such a way that it still refers
+to a file called -" 
+"Prefix the filename with a path":
+> cat ./-
+
+It's important to know, that this solution (Give the path) also works 
+for another clash with filenames!
+
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9

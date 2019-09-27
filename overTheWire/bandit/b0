@@ -1,1 +1,19 @@
 bandit0
+
+How to connect:
+> ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+Read the file:
+> cat readme
+
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+
+---------File Pattern (Sometimes is confusing)--------
+PasswordForTheCurrentLevel
+
+Description of how I get the password for the next 
+level.
+
+PasswordForTheNextLevel
+------------------------------------------------------
