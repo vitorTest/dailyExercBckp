@@ -1,0 +1,12 @@
+NAME
+       exiftool - Read and write meta information in files
+
+install
+# sudo apt install libimage-exiftool-perl
+
+to simply read all tags
+# exiftool nameOfPhoto.jpg
+
+removing all metadata of an image
+# exiftool -all= nameOfImage.jpg
+
