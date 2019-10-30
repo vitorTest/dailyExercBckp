@@ -1,1 +1,15 @@
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+To be quick I only did
+> file ./-*
+
+The unique type of text between the files was '-file07', doing cat in it
+you can find the flag
+
+But only human is a very questionable term. Since at the description of
+text files generaly we have the word 'text' at the description, we can
+verify all the files and grep only where this word appears
+
+> file ./* | grep text
+
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
