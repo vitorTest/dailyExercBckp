@@ -1,0 +1,23 @@
+It start with a CMS sketch.
+
+I'll to create a new page and insert <script>alert('xss');</script>,
+in the text field. Nothing.
+
+Now I'm going to try to do the same at the title. Yep, it works.
+The script is rendered at the home page:
+^FLAG^c14f96498f3fc6d81ecc5beced51bb92a85ec154ea7818b2ba4e8870e8615146$FLAG$
+
+Now I'm going to test as far as text box prevents XSS:
+hello <a name="n" href="javascript:alert('xss')">*you*</a>
+I find the same flag, when accessing home.
+And the link becomes broken.
+
+
+Now let's try some injection. At the edit page we can see a link:
+http://34.74.105.127/c129446045/page/edit/1
+So only testing:
+http://34.74.105.127/c129446045/page/edit/1'
+generated the second flag:
+^FLAG^6df26603843656e9817c75ce697dab67b7effdb7a0a15f65ed1f534b6895d234$FLAG$
+
+
