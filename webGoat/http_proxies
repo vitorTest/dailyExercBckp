@@ -1,0 +1,11 @@
+I'm going to try ZAP, that's the proxy used at the lesson.
+
+Download and install:
+https://github.com/zaproxy/zaproxy/wiki/Downloads
+I've downloaded ZAP_2_8_0_unix.sh
+> sudo ./ZAP...
+Installed at the /opt/zaproxy
+
+I've finished it. I get some time to realize that changing the
+method from POST to GET, I also had to change the URL... It was lame kk
+
