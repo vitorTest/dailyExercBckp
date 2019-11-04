@@ -1,0 +1,34 @@
+Trying to extract a flag from a image (esquisita_50_forensis.jpg).
+
+Probably it has a Alternate Data Stream (ADS) inside it. But it comes
+from NTFS (Windows) features and I don't know how to extract it from
+Linux.
+I found the command:
+> 7z e -sns esquisita_50_forensis.jpg
+
+It extracts a file 'ctf.jpg' that only can be open with a text editor...
+But there's nothing insid it. 
+When I extract from 'esquisita_50_forensis.jpg' I get the message:
+% ERROR: Unsupported Method : ctf.jpg
+If I verify the file, only get the message
+% ctf.jpg: empty
+
+I don't how to do it, so I'm going to approach it with xxd.
+There are two files ctf.jpg and ctf2.jpg, that I found by
+> xxd esquisita_50_forensis1.jpg | grep ctf
+It means that I could have did:
+> strings esquisita_50_forensis1.jpg | grep "ct"
+Yep.
+Probably the flag is inside the ctf2.jpg, but I'm not able to extract it
+
+ctf2.jpg:
+0001c123
+00022ae9
+
+> xxd -s 0x1c123 -l 0x69ce esquisita_50_forensis1.jpg
+
+I found a Rar! signature (52 61 72 21 1A 07 00). So I just removed the
+file for esquisita_50_forensis.rar and extracted the files ctf.jpg.
+
+There's nothing inside this image.
+ 

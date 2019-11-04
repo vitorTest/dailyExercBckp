@@ -1,14 +1,31 @@
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 
+I wanted to do it with ls and grep... But it seems simpler just doing a
+find... So it becomes very easy
 
+> find / -user bandit6 -group bandit6
 
-notes:
+Between a lot of "Permission denied" messages I could find:
+/var/lib/dpkg/info/bandit7.password
 
-find . -type f -size 1033c ! -executable -exec file {} + | grep ASCII
+It didn't even have to set the -size parameter. 
+But there's a lot of "Permission denied" messages polluting the output
+(at least in this case).
+Using 
+>  find ... | grep -v 'Permission'
+with find, is not working. Probably the command find prints first the
+"Permission denied" regardless grep. It most have to be some option
+in find command to omit such messages.
 
-Find here the type file (f), with the size of 1033c bytes, and if this file
-is not(!) an executable (-executable).
+I find it:
+https://www.cyberciti.biz/faq/searching-multiple-words-string-using-grep/
+And I'll not to explain the post here. So I could use:
 
-Then execute (-exec) the file command with the files that are already filtered
-({}) by 'find' and also execute it in paralel (+ |) with the command
-'grep', to filter if that file is a 'ASCII' type.
+> find / -user bandit7 -group bandit6 2>&1 | grep -v 'Permission' | grep -v 'No'
+To get rid of the "Permission" and the "No such file" messages.
+
+Or shorting it:
+
+> find / -user bandit7 -group bandit6 2>&1 | grep -v 'Permission\|No'
+
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs

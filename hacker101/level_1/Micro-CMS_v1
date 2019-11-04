@@ -7,17 +7,28 @@ Now I'm going to try to do the same at the title. Yep, it works.
 The script is rendered at the home page:
 ^FLAG^c14f96498f3fc6d81ecc5beced51bb92a85ec154ea7818b2ba4e8870e8615146$FLAG$
 
-Now I'm going to test as far as text box prevents XSS:
+Now I'm going to test as far as title box prevents XSS:
 hello <a name="n" href="javascript:alert('xss')">*you*</a>
 I find the same flag, when accessing home.
 And the link becomes broken.
-
+There's a warning: "Markdown is supported, but scripts are not".
+Well, the tag script is filtered... But can we insert JS in another tag?
+The site itself shows an example of a button... So let's test it:
+<button onclick="alert(1)">Click me</button> 
+It works, but it almost tricks me because besides the other flags, this
+one is found only at the source code.
 
 Now let's try some injection. At the edit page we can see a link:
 http://34.74.105.127/c129446045/page/edit/1
 So only testing:
 http://34.74.105.127/c129446045/page/edit/1'
-generated the second flag:
-^FLAG^6df26603843656e9817c75ce697dab67b7effdb7a0a15f65ed1f534b6895d234$FLAG$
+generated the third flag.
 
+There's a strange behaviour when it's created a new page... It starts
+by the page 12... If there's already the page 1 and 2, why not to 
+continues by the page 3? I'm going to access pages 3 up to 11.
+I found only one page (5), that have a 403-Forbidden acceess message.
+So, let's try to edit this page since we know the pattern of the URL
+for edition: http://34.94.3.143/891d57468e/page/edit/5.
+And there's the flag :) 
 

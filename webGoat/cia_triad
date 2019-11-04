@@ -1,0 +1,14 @@
+Confidentiality | Integrity | Availability
+
+The most crucial information security components and should be 
+guaranted in any secure system.
+
+Confidentiality - To prevent sensitive information from reaching
+		  people that should not get access to it.
+
+Integrity - To maintain the consistency, accuracy and trustworthiness of
+	    data over its entire life cycle.
+
+Availability - Make all the information available and accessible for 
+	       authorized persons whenever it is needed.
+
