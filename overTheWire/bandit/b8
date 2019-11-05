@@ -1,8 +1,6 @@
 cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 
-cat data.txt | grep millionth
-
-
+---Old------------------------------------------------------------------
 Basic of basic use of the commands suggested:
 
 grep    - find the line with the argument passed.
@@ -15,3 +13,14 @@ tar     - used to create/maintain/modify/extract *.tar.* files.
 gzip    - Compress or expand compressed files.
 bzip2   - A zip's compression method.
 xxd     - creates a hex dump of a given input or do the reverse.
+------------------------------------------------------------------------
+
+Important - uniq do run not run properly, without have the file sorted!
+
+> sort data.txt | uniq -u
+
+Understanding pipelines and buid a spellchecker with one line of command:
+http://www.westwind.com/reference/os-x/commandline/pipes.html (very nice reading)
+
+
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
