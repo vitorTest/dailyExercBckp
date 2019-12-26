@@ -1,15 +1,6 @@
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 
+> strings data.txt | grep "millionth"
 
-find / ! -readable -prune -o -type f -user bandit7 -group bandit6 -size 33c -print
 
-to avoid "Permission denied"
-AND do NOT suppress (other) error messages
-AND get exit status 0 ("all files are processed successfully")
-Works with: find (GNU findutils) 4.4.2. Background:
-
-The -readable test matches readable files. The ! operator returns true, when test is false. And ! -readable matches not readable directories (&files).
-The -prune action does not descend into directory.
-! -readable -prune can be translated to: if directory is not readable, do not descend into it.
-The -readable test takes into account access control lists and other permissions artefacts which the -perm test ignores.
-
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV

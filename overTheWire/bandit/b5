@@ -1,1 +1,40 @@
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+We have to find where:
+
+    human-readable
+    1033 bytes in size
+    not executable
+
+By the last challenge we know that how to find 'Human-readable' (at least
+something very close to that).
+Now due the big number of folders and files we'll have to use find.
+
+By the man find, we know that we could do '-exec command {} +', that
+allied with find, solves the "Human-readable'. But this in itself is
+the same as only list the files with file and grep. We've to use find 
+efficciently.
+
+We know that we're going to search for a file, so -type c... That's
+already default kkk
+
+Remembering that to search in man, press '/'. It accepts regular 
+expressions.
+
+-executable
+              Matches files which are executable and directories  which
+              are  searchable  (in a file name resolution sense) by the
+              current user.
+For a NO executable we have the option -not "Same as !".
+
+-size n[cwbkMG]
+              File uses n units of space, rounding up.
+	      (SEE ALL THE OPTION at the MAN)
+
+So we have all that we need. Actually I only made it to find:
+> find . -size 1033c -exec cat {} +
+
+But to find it using the full command:
+> find . -size 1033c ! -executable -exec file {} + | grep text
+
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7

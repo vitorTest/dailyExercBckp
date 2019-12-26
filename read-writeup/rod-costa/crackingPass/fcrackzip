@@ -1,0 +1,17 @@
+ZIP password cracker.
+
+Actually it would be a very fun project to implement. By violent.py 
+(book) we learn to build a very simple ZIP cracker.
+The advantage here is that this program already has a lot of 
+functionalities implemented.
+
+As usual you can consult help and man, but I'll to specify according
+to the video.
+
+> fcrackzip -v -b -u -l 5 -c fileToCrackPass.zip
+
+	-v - verbose
+	-b - brute force attack
+	-u - unzip
+	-l - lenght of the word to attempt to pass
+	-c - option of characterset
