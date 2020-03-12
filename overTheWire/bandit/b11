@@ -1,3 +1,13 @@
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
-Only Decode a base64 file.
+It's a ROT-13 cipher.
+Decoding:
+tr - Translate, squeeze, and/or delete characters from standard input,
+writing to standard output. 
+
+Rotating strings:
+> tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt
+:~ The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu 

@@ -1,3 +1,12 @@
 truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
-Use string to find the readable part of the file. :)
+> cat data.txt
+:~ veryLongStringThatEndsWithTwoEquals==
+
+So I assume that it's a base64 code.
+
+> echo -n "veryLongStringThatEndsWithTeoEquals==" | base64 -d
+:~ The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR

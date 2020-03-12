@@ -1,6 +1,7 @@
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 
-Important - uniq do run not run properly, without have the file sorted!
+strings data.txt | grep ===*
 
-Understanding pipelines and buid a spellchecker with one line of command:
-http://www.westwind.com/reference/os-x/commandline/pipes.html (very nice reading)
+
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+

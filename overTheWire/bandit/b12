@@ -1,8 +1,41 @@
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
-It's a ROT-13 cipher.
-Decoding:
-tr 
+As the game suggests, "reate a directory under /tmp" and "copy the 
+datafile".
 
-Rotating strings:
-tr 'A-Za-z' 'N-ZA-Mn-za-m' < rotateIt  >rotationated
+> mkdir /tmp/vl1x && cp data.txt /tmp/vl1x && cd /tmp/vl1x
+
+Now we can start the real task -> "data.txt is a hexdump of a file
+that has been repeatedly compressed". 
+So we have to "convert (or patch) hexdump into binary" (xxd --help),
+and this command is the option -r (reverse operation).  
+
+> xxd -r data.txt > fileReversed
+> file fileReversed
+:~fileReversed: gzip compressed data, was "data2.bin" [...]
+
+And away we go:
+> mv fileReversed fileReversed.gz
+> gunzip < fileReversed.gz > fileRev2
+> file fileRev2 
+:~bzip2 compressed data, block size = 900k
+> mv fileRev2 fileRev2.bz2
+# I'll keep the same pattern:
+# file decompressedFile
+# see what's it
+# rename it with fileRev[Number].extension of file type
+# It's easier to work and let files organized, with the 
+# number and the file's extension. 
+# So I'll only let the different kinds of extracting.
+# It's not necessary to add the extension in some cases.
+> bunzip2 < fileRev2.bz2 > fileRev3
+> tar -xf file4.tar
+
+In the end my folder was like that (ls):
+:~data8.gz  data9  data.txt  file4.tar  file5.tar  file6.bz2  
+:~file7.tar  fileRev2.bz2  fileRev3.gz  fileReversed.gz
+
+There're 9 extractions, the ninth file is a ASCII with the pass.
+
+
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL

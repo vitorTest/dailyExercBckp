@@ -1,4 +1,12 @@
 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
-Reconstruc the file that was converted in text in the data.txt file (xxd -r).
-From there, just make a series of decompressions (tar, gzip, bzip2).
+"For this level, you don’t get the next password, but you get a private
+ SSH key that can be used to log into the next level"
+
+> ssh -i sshkey.private bandit14@localhost
+
+So, we need to access the folder that was indicated.
+> cat /etc/bandit_pass/bandit14
+
+
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
