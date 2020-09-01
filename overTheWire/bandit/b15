@@ -1,5 +1,7 @@
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 
-You could use telnet or nc.
-telnet localhost 1234
-echo PreviousKey | nc localhost 1234
+> openssl s_client -connect localhost:30001
+Then past the pass of current level (BfMYroe26WYalil77FoDi9qh59eK5xNr)
+
+
+cluFn7wTiGryunymYOu4RcffSxQluehd
